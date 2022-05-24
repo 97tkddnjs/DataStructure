@@ -1,5 +1,8 @@
 package com.stack;
 
+import java.util.Stack;
+import java.util.concurrent.ConcurrentHashMap;
+
 public class IntStack {
     private int max;
     private int ptr;    //새로 삽입할 데이터의 위치를 의미함
@@ -88,6 +91,18 @@ public class IntStack {
 class Main {
     public static void main(String[] args) {
         IntStack st = new IntStack(5);
+
+        Stack<Integer> stack = new Stack<>();
+
+        // push
+        stack.push(3);
+        // stack의 크기 출력
+        stack.size();
+        // stack이 비어있는지 check (비어있다면 true)
+        stack.empty();
+        // stack에 1이 있는지 check (있다면 true)
+        stack.contains(1);
+
 
         for (int i = 0; i < 8; i++) { //일부러 에러 내본 것임
             st.push(i);
